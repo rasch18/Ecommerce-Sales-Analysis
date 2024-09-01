@@ -1,0 +1,10 @@
+ecommerce_transaction_analysis_dbt:
+  outputs:
+    dev:
+        type: duckdb
+        path: ../ecommerce_database.db # provided the path where db is located
+    test:
+        type: duckdb
+        path: test.duckdb
+
+  target: dev
