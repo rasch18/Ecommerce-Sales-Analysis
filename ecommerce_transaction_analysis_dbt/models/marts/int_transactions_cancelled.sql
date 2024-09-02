@@ -9,5 +9,8 @@ with cancelled_orders as (
       Left join {{ ref('int_transactions_products') }} c on b.stock_code = c.stock_code
       Where a.invoice_no like 'C%'
   )
-      Select *, (quantity * unit_price) as cancelled_sales_amount
-      From cancelled_orders Group by 1,2,3,4,5,6;
+      Select 
+        *,
+        (quantity * unit_price) as cancelled_sales_amount
+      From cancelled_orders 
+      Group by 1,2,3,4,5,6
