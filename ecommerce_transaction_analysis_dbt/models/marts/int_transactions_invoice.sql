@@ -6,5 +6,5 @@ with invoices as (
     From {{ ref('int_transactions')}}
 )
 
-    Select invoices
+    Select *
     From invoices
