@@ -1,4 +1,5 @@
-with transactions_table as (Select
+with transactions_table as (
+    Select
         a.invoice_date,
         a.invoice_no,
         a.customer_id,
@@ -8,7 +9,7 @@ with transactions_table as (Select
         b.quantity
     From {{ ref('int_transactions_invoice') }} a
     Left join {{ ref('int_transactions_invoice_items') }} b on a.invoice_no = b.invoice_no
-    Where a.invoice_no not in (Select invoice_no from int_transactions_cancelled) -- make sure to not include cancelled items
+    Where a.invoice_no not in (Select invoice_no from {{ ref('int_transactions_cancelled') }}) -- make sure to not include cancelled items
     
     -- Get total sum of quantities per item
     ), quantities as (
