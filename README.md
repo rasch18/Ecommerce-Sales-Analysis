@@ -9,4 +9,4 @@ Project Objectives:
 - Evaluate Sales Performance: Calculate average sales per day and per year across all items and regions.
 - Country-Specific Insights: Identify the best-selling products in each country.
 
-Note: ECanceled transactions are excluded to ensure the accuracy of sales data and investigate items with negative quantities.
+Note: Canceled transactions are excluded to ensure the accuracy of sales data and investigate items with negative quantities.
