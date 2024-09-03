@@ -1,9 +1,10 @@
 with customers as (
     Select 
-        customerid as customer_id,
+        customerid::integer as customer_id,
         country
     From {{ ref('int_transactions')}}
 )
 
-    Select *
+    Select distinct
+      *
     From customers

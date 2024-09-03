@@ -1,10 +1,11 @@
 with invoices as (
     Select 
         invoiceno as invoice_no, 
-        customerid as customer_id, 
-        invoicedate as invoice_date
+        invoicedate as invoice_date,
+        customerid::integer as customer_id
     From {{ ref('int_transactions')}}
 )
 
-    Select *
+    Select distinct 
+      *
     From invoices
