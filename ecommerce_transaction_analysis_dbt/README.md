@@ -7,6 +7,8 @@ Try running the following commands:
 - dbt debug
 - dbt test
 
+Note:
+- Make sure to run and activate dbt environment.
 
 ### Resources:
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
