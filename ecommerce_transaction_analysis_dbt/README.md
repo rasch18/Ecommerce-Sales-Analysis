@@ -1,9 +1,10 @@
-Welcome to your new dbt project!
+Welcome to ecommerce_transaction_analysis_dbt project!
 
 ### Using the starter project
 
 Try running the following commands:
 - dbt run
+- dbt debug
 - dbt test
 
 
